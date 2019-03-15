@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-mon-app
+spec:
+  ports:
+  - port: 9000
+    targetPort: 9000
+    name: http
+  selector:
+    app: spring-boot-mon-app
+  type: NodePort
